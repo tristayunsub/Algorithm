@@ -1,0 +1,143 @@
+William Lin LeetCoding Challenge
+
+P1. Single Number
+Given non-empty array of integers, every element appears twice except for one. find that single one
+Algo should have a linear runtime complexity 선형시간복잡도를가져라
+Example 1:
+Input: [2,2,1]
+Output: 1
+
+E.2
+Input:[4,1,2,1,2]
+Output: 4
+
+answer
+class Solution {
+public:
+    int singleNumber(vector<int>$ nums) {
+      int ans=0;
+      for(int a : nums)
+        ans^=a;
+      return ans;
+    }
+};
+
+
+
+
+
+P2. Happy Number
+
+Example 1:
+
+Input: n = 19
+Output: true
+Explanation:
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+12 + 02 + 02 = 1
+Example 2:
+
+Input: n = 2
+Output: false
+ 
+
+Constraints:
+
+1 <= n <= 231 - 1
+
+happy number is a number defined by the following process: starting with positive intger,양의정수. replace the number by sum of sqaures of its digits,
+and repeat the process until the number equals 1, or it loops endlessly in a cycle which does not include 1
+those numbers for which this process ends in 1 are happy numbers
+1로끝나는게 happy number이다.
+
+
+class Solution {
+public:
+    bool isHappy(int n) {
+        for(int i=0; i<100000; ++i){
+            if(n==1)
+                return 1;
+            int s2=0, m=n;
+            while(m) {
+                s2+=(m%10)*(m%10);
+                    m/=10;
+            }
+            n=s2;
+        }
+        return 0;
+    }
+};
+
+각자리수의 제곱을 더하여 happy인지 판별할 숫자를 만드는것. 주어진 입력을 문자열로 만들 자리수에 접근한후숫자로 변환하여
+제곱하여 더한다.
+2,3 happy 넘버가되기위한 조건. 문제조건2번에서 해피넘ㅂ버를 위한 과정을 반복하면ㄴ 1이 나와 종료되거나,
+일정한 패턴이 반복된다고 하였다.
+직관적으로 1과 10이 해피넘버이다. 종료되는 조건은 2~9를 살펴보면 될것
+
+n이 19이면 1제곱 + 9제곱이라 =82가된다.
+여기서또 
+8^2 + 2^2 = 68이되고~
+6^2 + 8^2 = 100이되고
+1^2+0^2+0^2 = 1이된다.
+
+2의경우 해피넘버과정을살펴보면
+2->4->16->37->59->89->145->42->20..가된다.
+4~20까지의 패턴이 반복된다. 이건 해피넘버가아님
+이과정을 9까지 진행할때 1과7을 제외한 10미만의 숫자들은 해피넘버가 아님 해피넘버가 1또는 7일때 참을 반환하고
+그 외의 값일때는 거짓을 반환한다.
+happy를 n으로 설정하고, happy를 0으로 초기화
+재귀함수문제?
+https://firsteast.tistory.com/40
+https://leetcode.com/problems/happy-number/discuss/560171/C%2B%2B-100-easy-solution
+재귀 종료 조건
+
+n이3일때는 3 9 81 8^2더하기1은 65 145 -> 42 20 ->4가된다.
+1과 7을제외한 10의수는안된다. 수학적으로보면. 자리숫자가 10으로나눴을때 last digit의 곱의 합이 1이거나 7이면 트루가된다. ||연산자.
+나머지 else는 false가된다.
+
+class Solution {
+public:
+    bool isHappy(int n) {
+        int sum=0;
+        
+        while(n!=1){
+            while(n){
+                sum+=(n%10)*(n%10);
+            n/=10;
+            }
+            n=sum;
+            sum=0;
+            if(n==4) return false;
+            cout<<n<<endl;
+        }
+        
+        return true;
+    }
+};
+    
+    # 코드해석 n이 5라ㄱ치면 sum= 25, n=25가되고 n/=10해봤을때 0이니까 아래로. n=25가되고. sum은다시0으로. 
+     
+    cout, cin and endl문법?
+    1. += 연산자 : a = a + b 와 같은 의미
+　　　　　　 예) int a,b;
+　　　　　　 　  a += b; // 변수 a 와 b 를 더한 값을 a에 대입한다.
+
+2. -= 연산자 : a = a - b 와 같은 의미
+　　　　　　 예) int a,b;
+　　　　　　 　  a -= b; // 변수 a 와 b 를 뺀값을 a에 대입한다.
+
+3. *= 연산자 : a = a * b 와 같은 의미
+　　　　　　 예) int a,b;
+　　　　　　 　  a *= b; // 변수 a 와 b 를 곱한값을 a에 대입한다.
+
+4. /= 연산자 : a = a / b 와 같은 의미
+　　　　　　 예) int a,b;
+　　　　　　 　  a /= b; // 변수 a 와 b 를 나눈값을 a에 대입한다.
+
+5. %= 연산자 : a = a % b 와 같은 의미
+　　　　　　 예) int a,b;
+　　　　　　 　  a %= b; // 변수 a 와 b 를 나눠서 나온 나머지를 변수 a에 대입한다.
+
+출처: https://clanguage.tistory.com/141 [프로그래밍 블로그]
