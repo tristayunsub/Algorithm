@@ -1,0 +1,116 @@
+maximum subarray
+
+
+Follow up을 확인하면 시간복잡도가 O(n)으로 해결되는 문제임을 알 수 있습니다.
+
+그래서 어떻게 하면 시간복잡도가 O(n)이 될 수 있을지 고민해봤어요.
+
+O(n)이 되려면 주어진 숫자 만큼 for문을 1회 실행 한다고 생각하면 됩니다.
+
+given an integer array nums 정수 배열 nums,에서 find the contiguous subarray (containing at least one number)which has the largest sum and retur its sum
+가장큰 sum을 구하고 return 이것의 합을 구하라 하위 배열을만들고. 그 전체의합이 가장큰것을찾아라~
+
+input -2 1, -3 4 -1 2 ,1 -5 4일떄
+output 6이고
+
+4,-1,2,1 largest sum= 6이다.
+카데인알고리즘? 이전계산결과값을 저장하고 이를 활용bestsum을찾아라
+
+class Solution(object):
+def maxSubArray(self, nums: List[int]) -> int:
+		cur = 0
+		maxSum = max(nums) # if all numbers are negatives, then max(nums) is the result
+    
+		for i in range(0,len(nums)): # len(nums) len의 길이까지 
+			cur += nums[i]    # cur에 변수값 더하기  
+			if cur > maxSum:  # cur이 maxsum보다 크면
+				maxSum = cur    # maxsum에 cur대입. 
+			if cur < 0: # if current value is smaller than 0, then it cannot contribute to provide the max subarray,한마디로 음수이면 빠꾸먹인다.
+				cur = 0
+
+		return maxSum
+    
+sum을담는 변수 2개생성
+ 
+
+currentSum : 현재 index와 max 값이 였던 index부터 sum을 구했던 숫자 중 가장 큰 값을 저장하는 변수
+
+maxSum : 현재 index 까지 max 값.
+
+    		currentSum = Math.max(nums[i]+currentSum, nums[i]);
+    		maxSum = Math.max(currentSum, maxSum);
+        
+       [-2, 1, -3, 4, -1, 2, 1, 5, -4] 로 예를 들어보겠습니다.
+       
+       index = 1 일때
+
+currentSum = max(1, -2 + 1) = 1;
+maxSum = 1
+index가 1일때 currentSum은 1과 -2+1 값 중 max 값을 선택합니다.
+
+그러면 currentSum은 1이 되고 자동적으로 index는 1부터 시작한다고 생각해도 됩니다.
+
+그리고 maxSum은 1이 되겠죠.
+
+
+https://wellsw.tistory.com/125
+솔루션1)- 브루트 포스(brute force) · 완전탐색 알고리즘. · 이 알고리즘?
+직관적인 알고리즘이다근데 시간오래걸림
+
+# Brute-Force Approach
+# Time Limit Exceeded
+class Solution:
+    def maxSubArray(self, nums):
+        max_sum = -inf
+        for i in range(len(nums)):
+            cur_sum = 0
+            for j in range(i, len(nums)):
+                print(nums[i:j])
+                cur_sum += nums[j]
+                max_sum = max(cur_sum, max_sum)
+        return max_sum
+
+솔루션2) - Kadane's 알고리즘
+Dynamic Programming 접근 방식으로 문제를 푸는 알고리즘입니다.
+https://zerobone.net/blog/cs/kadane-algorithm/
+
+
+아 알고리즘 기본적인걸 좀 배우고해야되나..
+이전 계산된 부분합을 사용하기 때문에 모든 부분합을 처음부터 다시 계산하지 않습니다.
+
+다이나믹 프로그래밍에 대한 개념을 새겨둔채로, 최대 부분합 문제의 개념부터 다시 생각해보자. 전체 배열이 주어졌고, 우리는 부분 배열이 가질 수 있는 부분합들 중에서 최대 부분합을 구해야 한다.
+이 문제를 O(N)으로 풀기 위한 핵심은 각각의 최대 부분합은 이전 최대 부분합이 반영된 결과값이라는 것이다.
+
+각각의 인덱스가 가질 수 있는 최대 부분합을 구하는 방법은 간단하다. 각각의 인덱스 값은 이전 인덱스가 갖고 있는 최대 부분합을 연장할지, 
+아니면 자신의 값으로 초기화할지 그저 선택을 하면된다.
+최대 부분합을 연장한다는 것은 이전 인덱스의 최대 부분합 값에 현재 인덱스의 최대 부분합 값을 더한 값이 현재 인덱스 값보다 크다는 것을 의미한다.
+
+
+math.max(A[I],A[I]+A[I-1])
+
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+       int max_sum=INT_MIN;
+        int sum=0;
+        if(nums.size()==1) return nums[0]; 
+        for(int i=0; i<nums.size(); i++)
+        {
+            sum=sum+nums[i];
+            max_sum=max(max_sum,sum);
+            if(sum<0) sum=0;
+        }
+        return max_sum;
+    }
+};
+
+예를들면 I가 1일때 가정해보자
+배열이 1,1    -6,2        3,3이있다고해보면 
+
+SUM=sum+nums[1] = 0 + 1이되
+
+max_sum=max(max_sum,1) 중에서 최대값을고름 6이라고치면
+
+sum이 0보다 작으면 sum은 0이된다.
+
