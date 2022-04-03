@@ -6,3 +6,5 @@
 https://kau-algorithm.tistory.com/27
 
 정수론?
+
+https://rkm0959.tistory.com/150?category=679633
