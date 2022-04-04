@@ -16,3 +16,8 @@ https://github.com/justiceHui/Unknown-To-Wellknown
 HOW TO PREPARE CODING INTERVIEW AND ALSO LOOP INTERVIEW LIKE OOP, SYSTEM DESIGN
 
 https://www.algoexpert.io/content
+
+
+https://yjg-lab.tistory.com/295?category=969260
+
+오우
