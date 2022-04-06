@@ -2,6 +2,9 @@
 
 푼 알고리즘 문제들 및 복기
 
+https://www.youtube.com/watch?v=Mo4vesaut8g&ab_channel=freeCodeCamp.org
+Big O notation
+
 
 https://kau-algorithm.tistory.com/27
 
