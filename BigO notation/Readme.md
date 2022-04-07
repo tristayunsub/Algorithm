@@ -103,6 +103,7 @@ function logFunc(n) {
      n = Math.floor(n/2)
      }
    }
+```   
    
    iteration 1 : n = 8/2 =4
    floors the result of our division
@@ -227,7 +228,9 @@ function nLogFunc(n) {
   }
  }
 }
+
 ```   
+
 for loop up until the
 size of n we will log or print te value for i
 
