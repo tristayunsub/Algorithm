@@ -2,6 +2,14 @@
 
 푼 알고리즘 문제들 및 복기
 
+https://www.youtube.com/watch?v=QDIW1it7m34&list=PLTC3gIv9IzFKKPSoNR4GqEL6gSp3_VzL5&ab_channel=%ED%81%B0%EB%8F%8C%EC%9D%98%ED%84%B0%EC%A0%84
+
+
+비트마스킹
+
+https://www.youtube.com/watch?v=fAAZixBzIAI&ab_channel=freeCodeCamp.org
+
+
 https://www.youtube.com/watch?v=Mo4vesaut8g&ab_channel=freeCodeCamp.org
 Big O notation
 
