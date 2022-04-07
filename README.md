@@ -4,6 +4,8 @@
 
 https://www.youtube.com/watch?v=QDIW1it7m34&list=PLTC3gIv9IzFKKPSoNR4GqEL6gSp3_VzL5&ab_channel=%ED%81%B0%EB%8F%8C%EC%9D%98%ED%84%B0%EC%A0%84
 
+https://www.youtube.com/watch?v=Vi0hauJemxA&t=1s&ab_channel=%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD
+hash 알고리즘
 
 비트마스킹
 
