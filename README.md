@@ -2,6 +2,9 @@
 
 푼 알고리즘 문제들 및 복기
 
+https://www.teamblind.com/kr/post/%EC%9D%98%EC%9A%95-%EC%99%84%EC%A0%84-%EB%B0%94%EB%8B%A5%EC%9D%B4%EB%8B%A4-sGH4BFvZ
+삼전이름값
+
 https://brunch.co.kr/@worker-in-yvr/18
 https://blog.naver.com/PostView.naver?blogId=occidere&logNo=222358757968
 힘들군
