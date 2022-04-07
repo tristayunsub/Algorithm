@@ -283,7 +283,10 @@ two to the n minus one
 
 
 
+
 O(n!) n factorial
+
+
 
 ```
 function f(n) {
@@ -308,6 +311,8 @@ function f(n) {
 
 가변 공간은 해결하려는 문제의 특정 인스턴스에 의존하는 크기를 가진 구조화 변수들을 위해서 필요로 하는 공간, 함수가 순환 호출을 할 경우 요구되는 추가 공간, 그러니까 동적으로 필요한 공간을 말합니다
 
+
+
 ```
 int factorial(int n)
 {
@@ -326,6 +331,7 @@ n의 값에 상관없이 스택에는 n과 i 그리고 fac 변수만 저장됩�
 O(1) 입니다.
 
 
+
 ```
 int factorial(int n)
 {
@@ -333,6 +339,8 @@ int factorial(int n)
     else return 1;
 }
 ```
+
+
 O(n)
 
 
