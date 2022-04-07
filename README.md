@@ -8,6 +8,12 @@ Big O notation
 https://swexpertacademy.com/main/sst/common/userTestList.do?
 삼성 역량테스트?
 
+https://security-nanglam.tistory.com/413
+준비방법?
+
+https://nmnm106803.tistory.com/2
+준비방법
+
 https://kau-algorithm.tistory.com/27
 
 정수론?
