@@ -24,3 +24,6 @@ https://www.algoexpert.io/content
 https://yjg-lab.tistory.com/295?category=969260
 
 오우
+
+https://dosimpact.tistory.com/47
+알고리즘을 위한 문법
