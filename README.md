@@ -14,6 +14,9 @@ https://security-nanglam.tistory.com/413
 https://nmnm106803.tistory.com/2
 준비방법
 
+https://baactree.tistory.com/53
+B형 알고리즘
+
 https://kau-algorithm.tistory.com/27
 
 정수론?
