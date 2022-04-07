@@ -5,6 +5,8 @@
 https://www.youtube.com/watch?v=Mo4vesaut8g&ab_channel=freeCodeCamp.org
 Big O notation
 
+https://swexpertacademy.com/main/sst/common/userTestList.do?
+삼성 역량테스트?
 
 https://kau-algorithm.tistory.com/27
 
