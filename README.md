@@ -29,3 +29,7 @@ https://dosimpact.tistory.com/47
 알고리즘을 위한 문법
 
 https://bloodstrawberry.tistory.com/204
+
+
+https://mark3236.tistory.com/entry/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-SW-%ED%85%8C%EC%8A%A4%ED%8A%B8-B%ED%98%95-%EA%B0%80%EC%9D%B4%EB%93%9C
+삼성 b형? 역량테스트
