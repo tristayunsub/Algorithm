@@ -27,3 +27,5 @@ https://yjg-lab.tistory.com/295?category=969260
 
 https://dosimpact.tistory.com/47
 알고리즘을 위한 문법
+
+https://bloodstrawberry.tistory.com/204
