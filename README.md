@@ -2,6 +2,9 @@
 
 푼 알고리즘 문제들 및 복기
 
+https://brunch.co.kr/@worker-in-yvr/12
+아마존인터뷰
+
 
 https://www.youtube.com/watch?v=il_t1WVLNxk&list=PLqM7alHXFySGqCvcwfqqMrteqWukz9ZoE&ab_channel=GeeksforGeeks
 아마존.. 공부..
