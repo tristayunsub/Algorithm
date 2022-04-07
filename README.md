@@ -3,6 +3,13 @@
 푼 알고리즘 문제들 및 복기
 
 
+https://www.youtube.com/watch?v=il_t1WVLNxk&list=PLqM7alHXFySGqCvcwfqqMrteqWukz9ZoE&ab_channel=GeeksforGeeks
+아마존.. 공부..
+hashing technique
+
+https://brunch.co.kr/@linecard/532
+차원압축알고리즘
+
 https://www.youtube.com/watch?v=mFY0J5W8Udk&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&index=79&ab_channel=AbdulBari
 해싱기법등 심화
 
