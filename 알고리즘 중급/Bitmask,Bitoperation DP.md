@@ -28,4 +28,7 @@ https://www.youtube.com/watch?v=yHBYeguDR0A&ab_channel=%EC%97%94%EC%A7%80%EB%8B%
 
 dp[current][visited] = min(dp[current][visited], tsp(next, visited + next) + w[current][next])
 
+비트마스킹 DP
+https://anz1217.tistory.com/39?category=777975
 
+https://www.youtube.com/results?search_query=bitmask+dynamicprogramming
