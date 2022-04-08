@@ -8,6 +8,9 @@ Traveling salesman problem
 
 시간을 줄이기 위해 동적계획법으로 접근하고, 점화식은 다음과 같다.
 
+https://www.youtube.com/watch?v=6sEFap7hIl4&list=PLb3g_Z8nEv1icFNrtZqByO1CrWVHLlO5g&ab_channel=KartikArora
+dp with bitmasking
+https://www.youtube.com/watch?v=jqJ5s077OKo&ab_channel=Errichto
  
 
 dp[current][visited] = min(dp[current][visited], tsp(next, visited + next) + w[current][next])
