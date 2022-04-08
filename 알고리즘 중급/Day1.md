@@ -2,6 +2,8 @@ segement tree
 ===
 https://www.youtube.com/watch?v=XaodfglnhVs&list=PLN3yisVKGPfhOAeqrYNun0Fu_O_gWy1mx&index=4&ab_channel=IOIKOREA
 
+https://www.youtube.com/watch?v=075fcq7oCC8&ab_channel=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%98%81%EB%A7%A8 segment tree rangequery
+
 길이 n의 수열 a1,a2,a3 an이 주어진다 다음쿼리르  출력하라
 
 L,R이 주어지면 AL+ ... AR을 출력하라
