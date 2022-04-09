@@ -121,4 +121,10 @@ Dance Dance Revolution
 경찰차
 공장
 케이크 자르기 2
+https://blog.naver.com/jinhan814/222565682682
+
+https://blog.naver.com/jinhan814/22232496656 조합론
+https://blog.naver.com/kangtaekyu52/222541932492알고리즘정리
+https://shoark7.github.io/category/programming/algorithm
+
 
