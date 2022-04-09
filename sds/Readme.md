@@ -3,6 +3,9 @@ https://velog.io/@woonchoi/2022-%EC%82%BC%EC%84%B1-SDS-%EB%8F%99%EA%B3%84-%EC%95
 https://gudwns999.tistory.com/36
 로드맵!
 
+https://kau-algorithm.tistory.com/29?category=831839
+시뮬문제?
+
 2022 삼성 SDS 동계 알고리즘 특강
 목록 보기
 1/1
