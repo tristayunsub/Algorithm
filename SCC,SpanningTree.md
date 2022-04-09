@@ -4,6 +4,9 @@ https://goo-gy.github.io/2021-05-23-kruskal
 크루스칼(Kruskal) 알고리즘을 이용하여 최소 스패닝 트리 (Minimum Spanning Tree) 찾기
 https://velog.io/@kasterra/%ED%95%B5%EC%8B%AC-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EA%B7%B8%EB%9E%98%ED%94%84-%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89-u0coubay
 
+https://jason9319.tistory.com/98?category=670441 설명잘되있으
+
+
 스패닝 트리란? 어떤 그래프의 부분 그래프 중에 모든 노드를 포함하고 모든 노드들이 서로
 
 
