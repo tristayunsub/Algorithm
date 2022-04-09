@@ -1,5 +1,8 @@
 https://velog.io/@woonchoi/2022-%EC%82%BC%EC%84%B1-SDS-%EB%8F%99%EA%B3%84-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%8A%B9%EA%B0%95-%EB%AC%B8%EC%A0%9C-%EB%A6%AC%EC%8A%A4%ED%8A%B8
 
+https://gudwns999.tistory.com/36
+로드맵!
+
 2022 삼성 SDS 동계 알고리즘 특강
 목록 보기
 1/1
