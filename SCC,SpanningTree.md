@@ -38,19 +38,26 @@ size 1,2,1,4,1,1,1
 
 union-find 알고리즘에서는 확정된 컴포넌트를 트리구조로 표현하여 트리의 루트가 대표 노드가 된다.
 union-find 단계 
+  
+  
 1.연결시킬 두 노드가 속한 컴포넌트에서 루트 노드 찾는다
 해당 노드가 속한 트리에서 부모를 계속따라가면 루트 찾을수있음
+  
+  
 2.루트 노드가 같다면 두 노드가 같은 컴포넌트에 존재하는 것이기에, 루트 노드가 다를때만
 두 컴포넌트 결합
 
   <kruskal with union-find>
     각 노드마다 parent link와 size 저장
     초깃값으로 parent link는 자신의 index를, size는 1을 가진다.
+   
     
     그래프 내의 간선을 weight가 작은 순으로 순회하면서 다음 작업 수행
      간선마다 연결된 두 노드의 루트 노드를 찾고
      루트 노드가 다르면 두 집합을 합치고 간선을 스패닝트리에 추가
-   ```
+ 
+    
+    ```
   if(sizez[root1] < sizes[root2])
   {
     parent_links[root1] = root2;
@@ -80,11 +87,15 @@ int solution()
     
 }
     
+```
+    
     ![components](https://user-images.githubusercontent.com/75001605/162580536-cad9e987-4d78-4649-b959-bbe01bd56546.png)
 
     
     [경로 압축] $$$ 필수
-  ```
+  
+    
+    ```
     
     
     
@@ -101,6 +112,7 @@ int solution()
     
     }
     
+ ```
     
     
 
