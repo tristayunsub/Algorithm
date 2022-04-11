@@ -2,6 +2,9 @@
 
 푼 알고리즘 문제들 및 복기
 
+https://blog.naver.com/PostView.naver?blogId=pasdfq&logNo=221722105247&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
+삼성 c형합격자
+
 https://dbstndi6316.tistory.com/338
 삼성 B형후기
 
