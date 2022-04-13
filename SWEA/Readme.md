@@ -1,3 +1,4 @@
+https://zoosso.tistory.com/335
 - C++(.cpp) / C 언어 권장
 
     : 참고할 자료가 C/C++ 코드가 많기도 하지만
