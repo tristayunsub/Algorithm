@@ -1,0 +1,97 @@
+```
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+struct Shark {
+   int s, d, z;
+}
+
+int R, C, M;
+int Dr[] = {-1, 1, 0, 0}; -1 위 1 아래. 오른쪽왼쪽일떈 변환x
+int Dc[] = {0, 0,1, -1}; 열에 대할떄는 오른쪽 1 왼쪽 -1
+Shark Arr[100][100];
+
+int solve() {
+  int sum = 0; //이상적으로는 동시에움지깅면좋지만 그게 불가능. 현재상황위치 백업해야함 
+ Shark backup[100][100];
+  for (int t=0; t<C; ++t){
+    for(int i=0; i<R; ++i){ //낚시하기위해 행값바꿔가면서 상어있나확인
+      if(Arr[i][t].z > 0) { //arr[i][t].z는 상어크기가 0 이상이면
+         sum += Arr[i][t].z;
+         Arr[i][t].z = 0;
+          break;
+      }
+      
+    }
+
+    memcpy(backup, arr, sizeof(Arr)); //남은 상어정보를 백업어레이에       복사.
+    memset(Arr, 0, sizeof(Arr)); //최종위치 0으로 초기화
+
+    //모든 상어 위치 확인 모든칸 확인
+    for (int i=0; i<R; ++i){
+      for (int j=0; j<C; ++j){
+           Shark& curr = backup[i][j];
+         if(curr.z >0) {
+                int nr = i + curr.s * Dr[curr.d], nc = j + curr.s * Dc[curr.d];   //newrow  
+                if( nr < 0) { //방향 1이 아래방향. 3에서 5를 뺼대 -2 양수를 음수로 바꿔주면된다. nr이 0보다 작으면.. 격자벗어나니까. 
+                  nr = -nr;
+                  curr.d = 1;
+                }          
+
+           if(nr > R -1) { //최종위치가 1 2일경우는 바꿀게없는데. 4부터는 변환해야됨 배열길이가 좁으니까 45는 바꿔야되고 최종 구한위치에 R-1로 나눠주면.. 몫이랑 나머지가.. 그니까 1이라는 행에 5 7 11 13
+2라는 행에 4 8 10 14 이렇게되잇죠 규칙이 존재함.    나눠주고 몫으로 
+  나머지가 최종위치됨. 홀수인경우? 최종위치에서 나머지를빼주면됌. 3에서 나머지         
+            int a = nr / (R-1);
+            int b = nr % (R-1);
+            if (a % 2 == 0) {
+              nr = b;
+            } else {
+              nr = R - 1 - b;
+              curr.d = 0;
+            }
+              
+           }
+           if ( nc < 0) { //좌우일떄
+              nc = -nc;
+              curr.d = 2;
+           }
+           if ( nc > C-1){
+             int a = nc / (C-1);
+             int b = nc % (C-1);
+             if (a % 2 == 0){ //나머지가 최종위치
+               nc = b;
+             } else {//넘어갈떄
+                nc = C - 1 - b //최종위치에서 나머지 뺴주면된다.                     curr.d = 3; 3이 왼쪽방향
+             }
+           }
+              //물고기 위치기록
+             if (Arr[nr][nc].z < curr.z) { //이미있다고하면 더큰거만넣어주면된다. 자기가크면 덮어쓰고. 만약에 더 작으면? 기록안하고없어진다.
+             Arr[nc][nc] = curr;//current껄 남겨
+          }
+           
+         }
+      }
+    }
+  }
+
+  return sum;
+  
+}
+
+int main() {
+  cin >> R >> C >> M;
+  for (int i=0; i<M; ++i){
+    int r, c, s, d, z;
+    cin >> r >> c >> s >> d >> z;
+    --r;
+    --c;
+    --d;
+    Arr[r][c] = {s, d, z};
+  }
+
+  cout << solve() << endl;
+  
+  return 0;
+}
+```
