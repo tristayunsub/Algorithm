@@ -120,6 +120,7 @@ int main() {
     return 0;
 }
 
+
 void dfs(int r, int c, int color) {
    bool visited[MAX_N][MAX_N] = {false};
    stack<Point> mystack;
@@ -130,15 +131,17 @@ void dfs(int r, int c, int color) {
      mystack.pop();
      if(visited[curr.row][curr.col]) continue;
 
-     visited[curr.row][curr.col] = true;
-     Board[curr.row][curr.col] = color;
+     visited[curr.row][curr.col] = true; //방문했다고 입력하고
+     Board[curr.row][curr.col] = color;//해당위치를 3값으로바뀐다.
 
-     for (int i = 0; i < 4; ++i){
-       int nr = curr.row + D[i][O], nc = curr.col + D[i][1];
-       if (nr < 0 || nr > N-1 || nc < 0 || nc > N-1) continue;
-       if (visited[nr][nc]) continue;
-       if (Board[nr][nc] == 1) continue;
-       mystack.push({nr, nc});
+     for (int i = 0; i < 4; ++i){ //인접한노드를 push한다.
+       int nr = curr.row + D[i][O], nc = curr.col + D[i][1];//지금행열값에 델타값 준다. 행과열의 좌표가 새로만들어짐.
+       if (nr < 0 || nr > N-1 || nc < 0 || nc > N-1) continue;//조건준다. 아래로벗어나면안되고. 열좌표도 벗어나면안되고. row값.
+//예를들면 nr <0은. -1이되소 위로올라가서 벗어나면안되니까 row값이..
+그래서 nr < 0 조건. 또 로우가 N보다 커지면.. 당연히 벗어나니까안되고. column도 옆으로가면안되고.. 
+       if (visited[nr][nc]) continue; //방문했으면 스킵. 
+       if (Board[nr][nc] == 1) continue;//벽만나도 스킵.
+       mystack.push({nr, nc});//조건 다만족하면 skip
        
        
      }
