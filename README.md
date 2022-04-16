@@ -1,5 +1,8 @@
 # Algorithm
 
+https://changicho.tistory.com/entry/%EC%9D%B8%EC%83%9D%EC%9D%84-%EA%B0%88%EC%95%84%EB%84%A3%EC%97%88%EB%8D%98-2020%EB%85%84-%ED%9A%8C%EA%B3%A0-feat-%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BA%A0%ED%94%84-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EB%A7%88%EC%97%90%EC%8A%A4%ED%8A%B8%EB%A1%9C
+흠 엄청빡세게 했는데도 떨어지네.. 소마정도면. 
+
 푼 알고리즘 문제들 및 복기
 https://yabmoons.tistory.com/683
 프로그래머스 해설잘되이음
