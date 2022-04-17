@@ -118,4 +118,31 @@ void bfs(int srcRow, int srcCol, int dstRow, int dstCol) {
   return -1;
 }
   ```
+  
+  ```
+  각 edge에 weight가 없을때
+r간단하게 bfs
+
+vector<int> dist(N);
+
+void bfs(int start){
+  dist.assign(N, -1);
+
+  queue<int> Q;
+  Q.push(start);
+  dist[start] = 0;  //{0}
+  while(!Q.empty()){  // {0,1,7}
+    int u = Q.front();
+    Q.pop();
+
+    for(int v : edges[u]){
+      if(dist[v] >= 0)
+        continue;
+      dist[v] = dist[u] + 1;
+      Q.push(v);
+    }
+  }
+}
+```
+  
   //빈공간방문 짧은경로로
