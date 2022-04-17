@@ -1,5 +1,11 @@
 https://zoosso.tistory.com/335
+
+https://blog.uniony.me/categories/#blog
+STL 없이 문제풀이
+
 - C++(.cpp) / C 언어 권장
+
+
 
     : 참고할 자료가 C/C++ 코드가 많기도 하지만
 
