@@ -149,3 +149,58 @@ void dfs(int r, int c, int color) {
 }
 
 ```
+
+
+
+cycle detection
+
+
+```
+cycle detection에서 무방향 그래프는
+
+1- 2 있을떄 1에서 2로간다음에 2에서 3으로넘어가야되는데
+무방향이면 2에서 1로가는 간선도 인지하고있음.
+근데 사이클 제대로 돌아가려면 이 간선은 무시해야됌
+
+  vector<vector<int>> edges;
+  vector<bool> visited;
+
+ bool isCyclicGraph(int u, int parent){
+   visited[u] = true;
+   for(int v : edges[u]){
+     if(!visited[v]){
+       if(isCyclicGraph(v, u))
+         return true;
+     }else if(v != parent) //요 두줄이 이제 그거 무시하라는거.직전에 방문했던게 아니라면 true로보내줌.
+       return true; //visited[v] && v!=parent =>>cycle
+   }
+   return false;
+ }
+
+if(isCyclicGraph(0, -1))
+  cout << "Cycle detected" << endl;
+
+방향이있는경우엔?
+DirectedGraph. DFS호출 STACK상에서 방문한 NODE를 다시 방문한 경우만 CYCLE존재.
+
+    vector<vector<int>> edges;
+    vector<bool> visited;
+    vector<bool> visitStack;
+
+
+ bool isCyclicGraph(int u){
+   visited[u] = true;
+   visitStack[u] = true;  //나간다는 표시
+   for(int v : edges[u]){
+     if(!visited[v]){
+       if(isCyclicGraph(v, u))
+         return true;
+       } else if (visitStack[v])
+          return true;
+     }
+     visitStack[u] = false;
+     return false; //visited[v] && v!=parent =>>cycle
+   }
+two pointer 사용
+
+```
