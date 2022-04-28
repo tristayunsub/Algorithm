@@ -50,4 +50,48 @@ int main() {
 ```
 
 
+```
+for문 한번만 돌리게
 
+/*LRVALUE?처럼 L을 업데이트 답을 업데이트 R반증가.
+valid -> right를 계속 증가시킨다. r가 증가가능한 상태인가? stable state r 증가불가능 invalid일땐 left 업데이트
+a
+ab
+aba 
+  ba 
+  bac distinct한조건에도맞고 길이도 3이다. bac를 집어넣음. 
+  baca 이조건되니까 invalid가됬네 a도 2개, 길이가 3도아님. 그럼 b를ㄹ빼야지
+   aca인데 이것도 invalid 그래서 ca 로
+   ca
+   cab distinct 길이도3 집어넣음 이걸 코딩으로 해보자
+   
+   
+ 
+*/
+//O(n*k)
+vector<string> findUniqueSubstrings(const string& s, int k){
+    int n = int(s.length());
+    
+
+    //unordered_set<string> strs;
+    set<string> strs;
+     
+     vector<int> cnt(256);
+     for(int L = 0, R = 0; R < n; R++) {
+         //update right 
+         cnt[s[R]]++;
+         
+         //update left
+         while(R - L + 1 > k || cnt[s[R]] > 1){
+                        cnt[s[L++]]--;
+         }
+          
+         
+         //update answer
+         if (R - L + 1 == k)
+               strs.insert(s.substr(L, k));         
+     }
+    
+    return vector<string>(strs.begin(), strs.end());
+}
+```
