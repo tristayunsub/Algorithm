@@ -50,7 +50,7 @@ int main() {
 ```
 
 
-
+```
 for문 한번만 돌리게
 
 /*LRVALUE?처럼 L을 업데이트 답을 업데이트 R반증가.
@@ -69,7 +69,6 @@ aba
  
 */
 
-```
 vector<string> findUniqueSubstrings(const string& s, int k){
     int n = int(s.length());
     
